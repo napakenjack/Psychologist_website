@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Cormorant Garamond", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  
+  --color-sage-50: #f4f5f2;
+  --color-sage-100: #e4e7e0;
+  --color-sage-200: #cbd2c3;
+  --color-sage-300: #aab59e;
+  --color-sage-400: #889578;
+  --color-sage-500: #6b7a5a;
+  --color-sage-600: #536045;
+  --color-sage-700: #424d38;
+  --color-sage-800: #363f2f;
+  --color-sage-900: #2d3428;
+
+  --color-sand-50: #fdfbf7;
+  --color-sand-100: #f7f3ea;
+  --color-sand-200: #eee5d5;
+  --color-sand-300: #e2d1b9;
+  --color-sand-400: #d3b998;
+  --color-sand-500: #c6a37b;
+  --color-sand-600: #b88d62;
+  --color-sand-700: #9a724f;
+  --color-sand-800: #7e5e43;
+  --color-sand-900: #664d38;
+}
+
+@layer base {
+  body {
+    @apply bg-sand-50 text-sage-900 font-sans antialiased selection:bg-sage-200 selection:text-sage-900;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif font-medium tracking-tight text-sage-900;
+  }
+}
+
+.pill-image {
+  border-radius: 9999px;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+}
+
+.oval-mask {
+  border-radius: 50% 50% 0 0 / 20% 20% 0 0;
+}
+
+.glass-nav {
+  background: rgba(253, 251, 247, 0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(107, 122, 90, 0.1);
+}
